@@ -1,118 +1,119 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      v-model="drawer"
-      :mini-variant="miniVariant"
-      :clipped="clipped"
-      fixed
+      v-model="drwer"
+      absolute
+      temporary
       app
     >
-      <v-list>
-        <v-list-item
-          v-for="(item, i) in items"
-          :key="i"
-          :to="item.to"
-          router
-          exact
-        >
-          <v-list-item-action>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-action>
+      <v-list dense>
+        <v-list-item link to="/">
           <v-list-item-content>
-            <v-list-item-title v-text="item.title" />
+            <v-list-item-title>Home</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/product">
+          <v-list-item-content>
+            <v-list-item-title>Product</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/learn">
+          <v-list-item-content>
+            <v-list-item-title>Learn</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+        <v-list-item link to="/safety">
+          <v-list-item-content>
+            <v-list-item-title>Safety</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      :clipped-left="clipped"
       fixed
-      app
+      flat
+      class="appBar"
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
+      <v-app-bar-nav-icon @click="drwer = !drwer" class="hidden-sm-and-up" />
+      <v-toolbar-title class="logo text-h4 mb-2">
+        Oymo
+      </v-toolbar-title>
       <v-btn
-        icon
-        @click.stop="miniVariant = !miniVariant"
+        depressed
+        rounded
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
+        to="/"
       >
-        <v-icon>mdi-{{ `chevron-${miniVariant ? 'right' : 'left'}` }}</v-icon>
+        Home
       </v-btn>
       <v-btn
-        icon
-        @click.stop="clipped = !clipped"
+        depressed
+        rounded
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
+        to="/product"
       >
-        <v-icon>mdi-application</v-icon>
+        Product
       </v-btn>
       <v-btn
-        icon
-        @click.stop="fixed = !fixed"
+        depressed
+        rounded
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
+        to="/learn"
       >
-        <v-icon>mdi-minus</v-icon>
+        Learn
       </v-btn>
-      <v-toolbar-title v-text="title" />
+      <v-btn
+        depressed
+        rounded
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
+        to="/safety"
+      >
+        Safety
+      </v-btn>
       <v-spacer />
       <v-btn
-        icon
-        @click.stop="rightDrawer = !rightDrawer"
+        color="black"
+        class="text-capitalize"
+        rounded
+        dark
       >
-        <v-icon>mdi-menu</v-icon>
+        Download
       </v-btn>
     </v-app-bar>
     <v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+      <Nuxt />
     </v-main>
-    <v-navigation-drawer
-      v-model="rightDrawer"
-      :right="right"
-      temporary
-      fixed
-    >
-      <v-list>
-        <v-list-item @click.native="right = !right">
-          <v-list-item-action>
-            <v-icon light>
-              mdi-repeat
-            </v-icon>
-          </v-list-item-action>
-          <v-list-item-title>Switch drawer (click me)</v-list-item-title>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
-    <v-footer
-      :absolute="!fixed"
-      app
-    >
-      <span>&copy; {{ new Date().getFullYear() }}</span>
-    </v-footer>
   </v-app>
 </template>
 
 <script>
 export default {
   name: 'DefaultLayout',
-  data () {
-    return {
-      clipped: false,
-      drawer: false,
-      fixed: false,
-      items: [
-        {
-          icon: 'mdi-apps',
-          title: 'Welcome',
-          to: '/'
-        },
-        {
-          icon: 'mdi-chart-bubble',
-          title: 'Inspire',
-          to: '/inspire'
-        }
-      ],
-      miniVariant: false,
-      right: true,
-      rightDrawer: false,
-      title: 'Vuetify.js'
-    }
-  }
+  data: () => ({
+    drwer: false
+  })
 }
 </script>
+
+
+<style lang="scss" scoped>
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.logo {
+  font-family: "Pacifico", cursive !important;
+  line-height: 60px;
+}
+
+.appBar {
+  background: rgba(244, 247, 248, 0.26) !important;
+  backdrop-filter: blur(4px);
+}
+</style>
