@@ -29,7 +29,7 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0" flat>
+        <v-card class="ma-0 pa-0">
           <v-row
             justify="space-between"
             align="start"
@@ -68,7 +68,7 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0" flat>
+        <v-card class="ma-0 pa-0">
           <v-row
             justify="space-between"
             align="start"
@@ -104,7 +104,7 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0" flat>
+        <v-card class="ma-0 pa-0">
           <v-row
             justify="space-between"
             align="start"
