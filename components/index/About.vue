@@ -29,15 +29,14 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0">
+        <v-card min-height="200">
           <v-row
             justify="space-between"
             align="start"
-            no-gutters
           >
             <v-col
               cols="12"
-              md="6"
+              md="3"
             >
               <img
                 src="../../assets/aboutCards/bg1.png"
@@ -46,7 +45,7 @@
             </v-col>
             <v-col
               cols="12"
-              md="6"
+              md="9"
             >
               <v-card-title class="text-heading-2 mt-n2">
                 Find friends
@@ -55,9 +54,6 @@
                 All you singles?
                 <br />
                 if you’re looking to fall in love, want to start dating, ready to start a relationship, or want to keep it casual, you need to be on Oymo.
-                <br />
-                <br />
-                Everyday thousands of new women and men add their profiles, hoping to find a genuine partner.
               </v-card-text>
             </v-col>
           </v-row>
@@ -68,15 +64,14 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0">
+        <v-card min-height="200">
           <v-row
             justify="space-between"
             align="start"
-            no-gutters
           >
             <v-col
               cols="12"
-              md="6"
+              md="3"
             >
               <img
                 src="../../assets/aboutCards/bg2.png"
@@ -85,7 +80,7 @@
             </v-col>
             <v-col
               cols="12"
-              md="6"
+              md="9"
             >
               <v-card-title class="text-heading-2 mt-n2">
                 Get entertained
@@ -104,24 +99,24 @@
         cols="12"
         sm="4"
       >
-        <v-card class="ma-0 pa-0">
+        <v-card min-height="200">
           <v-row
             justify="space-between"
             align="start"
-            no-gutters
           >
             <v-col
               cols="12"
-              md="6"
+              md="3"
             >
               <img
                 src="../../assets/aboutCards/bg3.png"
                 style="width: 100%;"
+                class="ma-1"
               />
             </v-col>
             <v-col
               cols="12"
-              md="6"
+              md="9"
             >
               <v-card-title class="text-heading-2 mt-n2">
                 Break the ice🧊

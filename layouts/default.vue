@@ -137,8 +137,15 @@
           >
             <p class="text-h6 font-weight-bold text-uppercase">Legal</p>
 
-            <p class="text-body-2">Privacy policy</p>
-            <p class="text-body-2 mt-n2">Terms of Use</p>
+            <p
+              v-for="(legal, i) in legals"
+              :key="i"
+              class="text-body-2 mt-n2"
+            >
+              <nuxt-link :to="legal.to" class="text-decoration-none grey--text text--darken-3">
+                {{legal.title}}
+              </nuxt-link>
+            </p>
           </v-col>
           <v-col
             cols="12"
@@ -211,7 +218,11 @@
 export default {
   name: 'DefaultLayout',
   data: () => ({
-    drwer: false
+    drwer: false,
+    legals: [
+      { title: 'Privacy policy', to: '/policy' },
+      { title: 'Terms of Use', to: '/terms' }
+    ]
   })
 }
 </script>
