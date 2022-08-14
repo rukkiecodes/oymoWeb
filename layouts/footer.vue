@@ -119,7 +119,12 @@
       </span>
     </v-container>
 
-    <v-snackbar v-model="snackbar" color="white" left bottom>
+    <v-snackbar
+      v-model="snackbar"
+      color="white"
+      left
+      bottom
+    >
       <span class="grey--text text--darken-4 font-weight-bold">{{ text }}</span>
     </v-snackbar>
   </v-footer>
@@ -136,9 +141,9 @@ export default {
       { title: 'Terms of Use', to: '/terms' }
     ],
     credential: {
-      name: 'Emmanual Daniels',
-      email: 'emmanual@gmail.com',
-      feedback: 'We’ve created pre-built Text Analytics dashboards, so you can spend less time building and more time acting on feedback. Just choose the comment question you want to analyze and watch your feedback data take shape in beautiful, out-of-the box dashboards.'
+      name: '',
+      email: '',
+      feedback: ''
     }
   }),
 
@@ -157,6 +162,9 @@ export default {
         this.loading = false
         this.snackbar = true
         this.text = result.data.message
+        this.credential.name = ''
+        this.credential.email = ''
+        this.credential.feedback = ''
       }).catch(error => {
         console.log(error)
         this.loading = false
