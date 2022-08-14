@@ -3,6 +3,7 @@
     fluid
     class="ma-0 pa-0"
   >
+
     <Head />
     <About />
   </v-container>

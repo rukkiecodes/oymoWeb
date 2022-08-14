@@ -1,7 +1,7 @@
 <template>
   <div
     fluid
-    class="pa-0 ma-0 pt-5 head"
+    class="pa-0 ma-0 pt-5 head black"
   >
     <v-container>
       <v-row
@@ -13,7 +13,7 @@
           sm="6"
           md="6"
         >
-          <span class="text-h4 text-sm-h3 font-weight-bold grey--text text--darken-3">
+          <span class="text-h4 text-sm-h3 font-weight-bold white--text">
             Find friends, and dates around you with just a swipe.
           </span>
           <br />
@@ -21,7 +21,7 @@
             dark
             large
             rounded
-            color="black"
+            color="red darken-1"
             class="mt-5 text-capitalize"
             href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-23d92dc94cac4bd7a2a38ae2ba25208e-signed.apk"
           >

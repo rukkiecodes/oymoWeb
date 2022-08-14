@@ -50,15 +50,15 @@
         @click="drwer = !drwer"
         class="hidden-sm-and-up"
       />
-      <v-toolbar-title class="logo text-h4 mb-2">
+      <v-toolbar-title class="logo text-h4 mb-2 white--text">
         Oymo
       </v-toolbar-title>
       <v-btn
         depressed
         rounded
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
+        color="rgba(0,0,0,0.3)"
+        active-class="red darken-1"
+        class="text-capitalize ml-4 hidden-xs-only white--text"
         to="/"
       >
         Home
@@ -66,9 +66,9 @@
       <v-btn
         depressed
         rounded
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
+        color="rgba(0,0,0,0.3)"
+        active-class="red darken-1"
+        class="text-capitalize ml-4 hidden-xs-only white--text"
         to="/product"
       >
         Product
@@ -76,9 +76,9 @@
       <v-btn
         depressed
         rounded
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
+        color="rgba(0,0,0,0.3)"
+        active-class="red darken-1"
+        class="text-capitalize ml-4 hidden-xs-only white--text"
         to="/learn"
       >
         Learn
@@ -86,9 +86,9 @@
       <v-btn
         depressed
         rounded
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
+        color="rgba(0,0,0,0.3)"
+        active-class="red darken-1"
+        class="text-capitalize ml-4 hidden-xs-only white--text"
         to="/safety"
       >
         Safety
@@ -135,7 +135,7 @@ export default {
 }
 
 .appBar {
-  background: rgba(244, 247, 248, 0.26) !important;
-  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.26) !important;
+  backdrop-filter: blur(10px);
 }
 </style>
