@@ -40,7 +40,7 @@
             >
               <img
                 src="../../assets/aboutCards/bg1.png"
-                style="width: 100%;"
+                :style="{'width': `${width}%`}"
               />
             </v-col>
             <v-col
@@ -75,7 +75,7 @@
             >
               <img
                 src="../../assets/aboutCards/bg2.png"
-                style="width: 100%;"
+                :style="{'width': `${width}%`}"
               />
             </v-col>
             <v-col
@@ -110,7 +110,7 @@
             >
               <img
                 src="../../assets/aboutCards/bg3.png"
-                style="width: 100%;"
+                :style="{'width': `${width}%`}"
                 class="ma-1"
               />
             </v-col>
@@ -138,9 +138,16 @@
 
 <script>
 export default {
-
+  computed: {
+    width () {
+      switch (this.$vuetify.breakpoint.name) {
+        case 'xs': return 30
+        case 'sm': return 30
+        case 'md': return 100
+        case 'lg': return 100
+        case 'xl': return 100
+      }
+    },
+  },
 }
 </script>
-
-<style>
-</style>

@@ -142,7 +142,10 @@
               :key="i"
               class="text-body-2 mt-n2"
             >
-              <nuxt-link :to="legal.to" class="text-decoration-none grey--text text--darken-3">
+              <nuxt-link
+                :to="legal.to"
+                class="text-decoration-none grey--text text--darken-3"
+              >
                 {{legal.title}}
               </nuxt-link>
             </p>
@@ -179,12 +182,20 @@
             sm="4"
           >
             <p class="text-h6 font-weight-bold text-uppercase">Feedback</p>
-            <v-text-field
-              solo
-              dense
-              class="rounded-lg"
-              placeholder="Email"
-            />
+            <div class="d-flex">
+              <v-text-field
+                solo
+                dense
+                class="rounded-lg mr-1"
+                placeholder="Your name"
+              />
+              <v-text-field
+                solo
+                dense
+                class="rounded-lg ml-1"
+                placeholder="Email"
+              />
+            </div>
             <v-textarea
               solo
               dense
