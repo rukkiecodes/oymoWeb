@@ -107,134 +107,18 @@
     <v-main>
       <Nuxt />
     </v-main>
-    <v-footer
-      class="mt-12"
-      color="transparent"
-    >
-      <v-container>
-        <v-row
-          justify="start"
-          align="start"
-        >
-          <v-col cols="12">
-            <span class="text-uppercase black--text font-weight-bold mr-5">
-              GET THE APP!
-            </span>
-            <v-btn
-              dark
-              large
-              rounded
-              color="black"
-              class="text-capitalize"
-              href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-23d92dc94cac4bd7a2a38ae2ba25208e-signed.apk"
-            >
-              Download
-            </v-btn>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-          >
-            <p class="text-h6 font-weight-bold text-uppercase">Legal</p>
-
-            <p
-              v-for="(legal, i) in legals"
-              :key="i"
-              class="text-body-2 mt-n2"
-            >
-              <nuxt-link
-                :to="legal.to"
-                class="text-decoration-none grey--text text--darken-3"
-              >
-                {{legal.title}}
-              </nuxt-link>
-            </p>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-          >
-            <p class="text-h6 font-weight-bold text-uppercase">SOCIAL</p>
-
-            <div class="d-fles">
-              <v-btn
-                fab
-                small
-                depressed
-                class="mr-5"
-                href="https://www.facebook.com/oymoDates"
-              >
-                <v-icon>mdi-facebook</v-icon>
-              </v-btn>
-              <v-btn
-                fab
-                small
-                depressed
-                class="mr-5"
-                href="https://twitter.com/rukkiecodes"
-              >
-                <v-icon>mdi-twitter</v-icon>
-              </v-btn>
-            </div>
-          </v-col>
-          <v-col
-            cols="12"
-            sm="4"
-          >
-            <p class="text-h6 font-weight-bold text-uppercase">Feedback</p>
-            <div class="d-flex">
-              <v-text-field
-                solo
-                dense
-                class="rounded-lg mr-1"
-                placeholder="Your name"
-              />
-              <v-text-field
-                solo
-                dense
-                class="rounded-lg ml-1"
-                placeholder="Email"
-              />
-            </div>
-            <v-textarea
-              solo
-              dense
-              rows="3"
-              no-resize
-              class="rounded-lg"
-              placeholder="Feedback"
-            />
-            <v-btn
-              color="red darken-1"
-              class="rounded-lg"
-              depressed
-              rounded
-              block
-              dark
-            >
-              Send
-            </v-btn>
-          </v-col>
-        </v-row>
-        <v-divider class="my-5" />
-        <span class="text-caption grey--text text--darken-3">
-          ©Oymo {{ new Date().getFullYear() }}, All Rights Reserved
-        </span>
-      </v-container>
-    </v-footer>
+    <Footer />
   </v-app>
 </template>
 
 <script>
+import Footer from "./footer.vue";
 export default {
-  name: 'DefaultLayout',
-  data: () => ({
-    drwer: false,
-    legals: [
-      { title: 'Privacy policy', to: '/policy' },
-      { title: 'Terms of Use', to: '/terms' }
-    ]
-  })
+    name: "DefaultLayout",
+    data: () => ({
+        drwer: false
+    }),
+    components: { Footer }
 }
 </script>
 
