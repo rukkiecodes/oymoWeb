@@ -35,11 +35,11 @@
 
 <style lang="scss" scoped>
 .head {
-  background-image: url("../../assets/bg.png");
+  background: linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.9)),
+    url("../../assets/bg.png") no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
-  background-repeat: no-repeat;
   height: 100vh;
   display: flex;
   align-items: center;

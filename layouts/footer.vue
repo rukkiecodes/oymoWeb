@@ -8,21 +8,6 @@
         justify="start"
         align="start"
       >
-        <v-col cols="12">
-          <span class="text-uppercase black--text font-weight-bold mr-5">
-            GET THE APP!
-          </span>
-          <v-btn
-            dark
-            large
-            rounded
-            color="black"
-            class="text-capitalize"
-            href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-23d92dc94cac4bd7a2a38ae2ba25208e-signed.apk"
-          >
-            Download
-          </v-btn>
-        </v-col>
         <v-col
           cols="12"
           sm="4"
@@ -76,27 +61,26 @@
           <p class="text-h6 font-weight-bold text-uppercase">Feedback</p>
           <div class="d-flex">
             <v-text-field
-              solo
               dense
-              class="rounded-lg mr-1"
-              placeholder="Your name"
+              class="mr-1"
+              color="grey darken-3"
+              label="Your name"
               v-model="credential.name"
             />
             <v-text-field
-              solo
               dense
-              placeholder="Email"
-              class="rounded-lg ml-1"
+              class="ml-1"
+              label="Email"
+              color="grey darken-3"
               v-model="credential.email"
             />
           </div>
           <v-textarea
-            solo
             dense
             rows="3"
             no-resize
-            class="rounded-lg"
-            placeholder="Feedback"
+            color="grey darken-3"
+            label="Feedback"
             v-model="credential.feedback"
           />
           <v-btn

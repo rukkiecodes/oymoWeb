@@ -29,7 +29,11 @@
         cols="12"
         sm="4"
       >
-        <v-card min-height="200">
+        <v-card
+          min-height="200"
+          flat
+          outlined
+        >
           <v-row
             justify="space-between"
             align="start"
@@ -41,6 +45,7 @@
               <img
                 src="../../assets/aboutCards/bg1.png"
                 :style="{'width': `${width}%`}"
+                class="ma-3"
               />
             </v-col>
             <v-col
@@ -64,7 +69,11 @@
         cols="12"
         sm="4"
       >
-        <v-card min-height="200">
+        <v-card
+          min-height="200"
+          flat
+          outlined
+        >
           <v-row
             justify="space-between"
             align="start"
@@ -76,6 +85,7 @@
               <img
                 src="../../assets/aboutCards/bg2.png"
                 :style="{'width': `${width}%`}"
+                class="ma-3"
               />
             </v-col>
             <v-col
@@ -99,7 +109,11 @@
         cols="12"
         sm="4"
       >
-        <v-card min-height="200">
+        <v-card
+          min-height="200"
+          flat
+          outlined
+        >
           <v-row
             justify="space-between"
             align="start"
@@ -111,7 +125,7 @@
               <img
                 src="../../assets/aboutCards/bg3.png"
                 :style="{'width': `${width}%`}"
-                class="ma-1"
+                class="ma-3"
               />
             </v-col>
             <v-col
