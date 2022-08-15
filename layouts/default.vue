@@ -17,10 +17,10 @@
         </v-list-item>
         <v-list-item
           link
-          to="/product"
+          to="/about"
         >
           <v-list-item-content>
-            <v-list-item-title>Product</v-list-item-title>
+            <v-list-item-title>About</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
         <v-list-item
@@ -44,51 +44,51 @@
     <v-app-bar
       fixed
       flat
-      class="appBar"
+      color="white"
     >
       <v-app-bar-nav-icon
         @click="drwer = !drwer"
         class="hidden-sm-and-up"
       />
-      <v-toolbar-title class="logo text-h4 mb-2 white--text">
+      <v-toolbar-title class="logo text-h4 mb-2 black--text">
         Oymo
       </v-toolbar-title>
       <v-btn
-        depressed
         rounded
-        color="rgba(0,0,0,0.3)"
-        active-class="red darken-1"
-        class="text-capitalize ml-4 hidden-xs-only white--text"
+        depressed
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
         to="/"
       >
         Home
       </v-btn>
       <v-btn
-        depressed
         rounded
-        color="rgba(0,0,0,0.3)"
-        active-class="red darken-1"
-        class="text-capitalize ml-4 hidden-xs-only white--text"
-        to="/product"
+        depressed
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
+        to="/about"
       >
-        Product
+        About
       </v-btn>
       <v-btn
-        depressed
         rounded
-        color="rgba(0,0,0,0.3)"
-        active-class="red darken-1"
-        class="text-capitalize ml-4 hidden-xs-only white--text"
+        depressed
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
         to="/learn"
       >
         Learn
       </v-btn>
       <v-btn
-        depressed
         rounded
-        color="rgba(0,0,0,0.3)"
-        active-class="red darken-1"
-        class="text-capitalize ml-4 hidden-xs-only white--text"
+        depressed
+        color="transparent"
+        active-class="red darken-1 white--text"
+        class="text-capitalize ml-4 hidden-xs-only"
         to="/safety"
       >
         Safety
