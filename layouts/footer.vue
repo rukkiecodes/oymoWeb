@@ -10,9 +10,9 @@
       >
         <v-col
           cols="12"
-          sm="4"
+          sm="3"
         >
-          <p class="text-h6 font-weight-bold text-uppercase">Legal</p>
+          <p class="text-h6 font-weight-bold text-uppercase">DOCUMENTS</p>
 
           <p
             v-for="(legal, i) in legals"
@@ -29,7 +29,7 @@
         </v-col>
         <v-col
           cols="12"
-          sm="4"
+          sm="3"
         >
           <p class="text-h6 font-weight-bold text-uppercase">SOCIAL</p>
 
@@ -56,7 +56,7 @@
         </v-col>
         <v-col
           cols="12"
-          sm="4"
+          sm="6"
         >
           <p class="text-h6 font-weight-bold text-uppercase">Feedback</p>
           <div class="d-flex">
@@ -77,7 +77,7 @@
           </div>
           <v-textarea
             dense
-            rows="3"
+            rows="2"
             no-resize
             color="grey darken-3"
             label="Feedback"
@@ -98,9 +98,24 @@
         </v-col>
       </v-row>
       <v-divider class="my-5" />
-      <span class="text-caption grey--text text--darken-3">
-        ©Oymo {{ new Date().getFullYear() }}, All Rights Reserved
-      </span>
+      <v-row
+        justify="space-between"
+        align="center"
+      >
+        <div class="d-flex">
+          <nuxt-link
+            v-for="(legal, i) in legals"
+            :key="i"
+            :to="legal.to"
+            class="text-caption grey--text text--darken-3 mr-2"
+          >
+            {{ legal.title }}
+          </nuxt-link>
+        </div>
+        <span class="text-caption grey--text text--darken-3">
+          ©Oymo {{ new Date().getFullYear() }}, All Rights Reserved
+        </span>
+      </v-row>
     </v-container>
 
     <v-snackbar
@@ -122,7 +137,9 @@ export default {
     text: '',
     legals: [
       { title: 'Privacy policy', to: '/policy' },
-      { title: 'Terms of Use', to: '/terms' }
+      { title: 'Terms of Use', to: '/terms' },
+      { title: 'About Oymo', to: '/abour' },
+      { title: 'Safety', to: '/safety' }
     ],
     credential: {
       name: '',

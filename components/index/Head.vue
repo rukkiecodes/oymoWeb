@@ -10,8 +10,9 @@
       >
         <v-col
           cols="12"
-          sm="6"
-          md="6"
+          sm="8"
+          md="8"
+          lg="7"
         >
           <span class="text-h4 text-sm-h3 font-weight-bold white--text">
             Find friends, and dates around you with just a swipe.

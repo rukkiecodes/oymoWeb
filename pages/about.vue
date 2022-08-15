@@ -3,7 +3,6 @@
     fluid
     class="ma-0 pa-0"
   >
-
     <Head />
   </v-container>
 </template>

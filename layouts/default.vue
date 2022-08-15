@@ -25,14 +25,6 @@
         </v-list-item>
         <v-list-item
           link
-          to="/learn"
-        >
-          <v-list-item-content>
-            <v-list-item-title>Learn</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          link
           to="/safety"
         >
           <v-list-item-content>
@@ -45,12 +37,13 @@
       fixed
       flat
       color="white"
+      class="rounded-lg ma-2 ma-sm-5"
     >
       <v-app-bar-nav-icon
         @click="drwer = !drwer"
         class="hidden-sm-and-up"
       />
-      <v-toolbar-title class="logo text-h4 mb-2 black--text">
+      <v-toolbar-title class="logo text-h5 mb-1 mb-sm-2 black--text">
         Oymo
       </v-toolbar-title>
       <v-btn
@@ -72,16 +65,6 @@
         to="/about"
       >
         About
-      </v-btn>
-      <v-btn
-        rounded
-        depressed
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
-        to="/learn"
-      >
-        Learn
       </v-btn>
       <v-btn
         rounded
