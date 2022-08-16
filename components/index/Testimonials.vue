@@ -2,6 +2,7 @@
   <v-container>
     <v-slide-group
       v-model="model"
+      v-if="feedbacks.length >= 10"
       class="pa-4 px-0 mx-0"
     >
       <v-slide-item

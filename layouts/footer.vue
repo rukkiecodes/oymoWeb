@@ -138,7 +138,7 @@ export default {
     legals: [
       { title: 'Privacy policy', to: '/policy' },
       { title: 'Terms of Use', to: '/terms' },
-      { title: 'About Oymo', to: '/abour' },
+      { title: 'About Oymo', to: '/about' },
       { title: 'Safety', to: '/safety' }
     ],
     credential: {
