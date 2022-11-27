@@ -1,4 +1,4 @@
-# oymoWeb
+# oymoWebsite
 
 ## Build Setup
 

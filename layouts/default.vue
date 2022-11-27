@@ -1,124 +1,111 @@
 <template>
   <v-app dark>
     <v-navigation-drawer
-      v-model="drwer"
-      absolute
-      temporary
       app
+      temporary
+      v-model="drawer"
     >
-      <v-list dense>
+      <v-list>
         <v-list-item
-          link
-          to="/"
+          v-for="(route, i) in routes"
+          :key="i"
+          :to="route.to"
+          router
+          exact
         >
+          <v-list-item-action>
+            <v-icon>{{ route.icon }}</v-icon>
+          </v-list-item-action>
           <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          link
-          to="/about"
-        >
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item
-          link
-          to="/safety"
-        >
-          <v-list-item-content>
-            <v-list-item-title>Safety</v-list-item-title>
+            <v-list-item-title>{{ route.title }}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
-      fixed
+      app
       flat
-      color="white"
-      class="rounded-lg ma-2 ma-sm-5"
+      dense
+      fixed
+      class="app-bar"
     >
       <v-app-bar-nav-icon
-        @click="drwer = !drwer"
         class="hidden-sm-and-up"
+        @click.stop="drawer = !drawer"
       />
-      <v-toolbar-title class="logo text-h5 mb-1 mb-sm-2 black--text">
-        Oymo
-      </v-toolbar-title>
-      <v-btn
-        rounded
-        depressed
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
+      <nuxt-link
         to="/"
-      >
-        Home
-      </v-btn>
-      <v-btn
-        rounded
-        depressed
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
-        to="/about"
-      >
-        About
-      </v-btn>
-      <v-btn
-        rounded
-        depressed
-        color="transparent"
-        active-class="red darken-1 white--text"
-        class="text-capitalize ml-4 hidden-xs-only"
-        to="/safety"
-      >
-        Safety
-      </v-btn>
+        class="text-decoration-none grey--text text--darken-4 text-h6"
+      >{{ title }}</nuxt-link>
       <v-spacer />
+
+      <nuxt-link
+        v-for="(btn, i) in routes"
+        :key="i"
+        :to="btn.to"
+        class="text-decoration-none grey--text text--darken-2 ml-5 hidden-xs-only"
+        active-class="text--darken-4 font-weight-bold"
+      >{{btn.title}}</nuxt-link>
+
       <v-btn
         dark
         rounded
-        color="black"
-        class="text-capitalize"
-        href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-23d92dc94cac4bd7a2a38ae2ba25208e-signed.apk"
-      >
-        Download
-      </v-btn>
+        depressed
+        class="text-capitalize ml-5"
+      >Download</v-btn>
     </v-app-bar>
     <v-main>
       <Nuxt />
     </v-main>
-    <Footer />
+    <v-footer
+      app
+      absolute
+    >
+      <span>&copy; {{ new Date().getFullYear() }}</span>
+    </v-footer>
   </v-app>
 </template>
 
 <script>
-import Footer from "./footer.vue";
 export default {
-    name: "DefaultLayout",
-    data: () => ({
-        drwer: false
-    }),
-    components: { Footer }
+  name: 'DefaultLayout',
+  data: () => ({
+    drawer: false,
+    title: 'Oymo',
+    routes: [
+      {
+        to: '/about',
+        icon: 'mdi-comment-question',
+        title: 'Our company'
+      },
+      {
+        to: '/faq',
+        icon: 'mdi-account-question',
+        title: 'FAQs'
+      },
+      {
+        to: '/updateds',
+        icon: 'mdi-update',
+        title: 'Updates'
+      },
+      {
+        to: '/contact',
+        icon: 'mdi-message',
+        title: 'Contact us'
+      },
+    ]
+  })
 }
 </script>
 
-
-<style lang="scss" scoped>
-@font-face {
-  font-family: Pacifico;
-  src: url("../assets/Pacifico/Pacifico-Regular.ttf") format("truetype");
+<style>
+* {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif !important;
 }
-
-.logo {
-  font-family: Pacifico !important;
-  line-height: 60px;
-}
-
-.appBar {
-  background: rgba(0, 0, 0, 0.26) !important;
-  backdrop-filter: blur(10px);
+.app-bar {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+  border-radius: 10px;
 }
 </style>

@@ -1,21 +1,16 @@
 <template>
-  <v-container
-    fluid
-    class="ma-0 pa-0"
-  >
-
-    <Head />
-    <About />
-    <Testimonials />
+  <v-container>
+    <section1Vue />
   </v-container>
 </template>
 
 <script>
-import Head from '~/components/index/Head.vue';
-import About from '~/components/index/About.vue';
-import Testimonials from '~/components/index/Testimonials.vue';
+import section1Vue from '~/components/index/section1.vue';
 export default {
-  name: "IndexPage",
-  components: { Head, About, Testimonials }
+  name: 'IndexPage',
+
+  components: {
+    section1Vue
+  }
 }
 </script>
