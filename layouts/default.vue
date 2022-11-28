@@ -25,8 +25,8 @@
     <v-app-bar
       app
       flat
-      dense
       fixed
+      color="transparent"
       class="app-bar"
     >
       <v-app-bar-nav-icon

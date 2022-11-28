@@ -23,7 +23,7 @@
     </v-card-text>
 
     <v-card-actions>
-      <v-btn dark depressed rounded class="px-8 text-capitalize">
+      <v-btn dark depressed rounded large class="px-5 text-capitalize">
         Join wait list
       </v-btn>
     </v-card-actions>

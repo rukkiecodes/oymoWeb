@@ -17,7 +17,7 @@
     >
       <img
         src="../../assets/images/hero.png"
-        style="width: 80%;"
+        style="width: 70%;"
       />
     </v-col>
   </v-row>
