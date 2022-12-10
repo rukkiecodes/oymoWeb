@@ -36,6 +36,17 @@
         </v-col>
       </v-row>
     </v-card-text>
+    <v-card-text class="py-0">
+      <v-card-actions class="pl-0">
+        <v-btn
+          class="text-capitalize bg-black text-white"
+          href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-95766d60f1c84fe9b30af93113755b80-signed.apk"
+          >Download Oymo</v-btn
+        >
+        <v-spacer />
+        <v-btn color="#ff4f98" variant="outlined">Submit</v-btn>
+      </v-card-actions>
+    </v-card-text>
   </v-card>
 </template>
 
