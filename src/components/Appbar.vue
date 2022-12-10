@@ -33,7 +33,6 @@
 
     <v-btn
       color="black"
-      rounded
       class="text-capitalize ml-5"
       href="https://exp-shell-app-assets.s3.us-west-1.amazonaws.com/android/%40rukkiecodes/oymo-95766d60f1c84fe9b30af93113755b80-signed.apk"
       >Download</v-btn

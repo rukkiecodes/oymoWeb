@@ -59,7 +59,7 @@ export default {};
   background: -webkit-linear-gradient(45deg, #ff4f98, #727aff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  line-height: 1em;
+  line-height: 1em !important;
 }
 .emoji {
   color: initial !important;

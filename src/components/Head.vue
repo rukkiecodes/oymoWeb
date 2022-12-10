@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import logo from "../assets/logo.svg";
 import WaitFormVue from "./fragments/WaitForm.vue";
 export default {
   name: "HelloWorld",
