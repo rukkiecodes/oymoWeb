@@ -1,15 +1,19 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-container class="body">
+    <h1 class="text-h4 text-sm-h3 text-md-h2 font-weight-regular">About Us</h1>
+    <Section1Vue />
+  </v-container>
 </template>
 
+<script>
+import Section1Vue from "../components/about/Section1.vue";
+export default {
+  components: { Section1Vue },
+};
+</script>
+
 <style>
-@media (min-width: 1024px) {
-  .about {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-  }
+.body {
+  margin-top: 30vh;
 }
 </style>
