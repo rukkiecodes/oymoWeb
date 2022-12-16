@@ -2,7 +2,9 @@
   <v-app>
     <AppbarVue />
     <v-main>
-      <router-view />
+      <transition name="fade" mode="out-in">
+        <router-view />
+      </transition>
     </v-main>
   </v-app>
 </template>
@@ -16,3 +18,22 @@ export default {
   },
 };
 </script>
+
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+* {
+  font-family: "Fira Code", monospace !important;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.8s;
+  transition-property: opacity;
+  transition-timing-function: ease-in-out;
+}
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+</style>
