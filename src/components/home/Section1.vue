@@ -1,19 +1,19 @@
 <template>
   <v-container class="my-16">
     <v-row justify="space-between" align="center">
-      <v-col cols="12" sm="4" class="d-flex justify-center justify-lg-start">
+      <v-col cols="12" sm="6" md="4" class="d-flex justify-center justify-lg-start">
         <v-card width="400" flat>
           <v-card-text>
             <img src="../../assets/images/match.png" style="width: 100%" />
           </v-card-text>
         </v-card>
       </v-col>
-      <v-col cols="12" sm="4" class="d-flex justify-center">
+      <v-col cols="12" sm="6" md="4" class="d-none d-md-flex justify-center">
         <v-progress-circular
           :rotate="360"
           :size="200"
           :width="15"
-          :model-value="20"
+          :model-value="60"
           color="#ff4040"
         >
           <div class="d-flex flex-column justify-center align-center">
@@ -27,7 +27,7 @@
           </div>
         </v-progress-circular>
       </v-col>
-      <v-col cols="12" sm="4">
+      <v-col cols="12" sm="6" md="4">
         <v-card flat>
           <v-card-title class="title text-uppercase text-body-1"
             >Quick match up</v-card-title

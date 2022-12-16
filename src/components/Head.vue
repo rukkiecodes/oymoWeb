@@ -4,7 +4,7 @@
       <v-col cols="12" sm="6">
         <WaitFormVue />
       </v-col>
-      <v-col cols="12" sm="6" class="d-none d-sm-flex justify-center justify-lg-end">
+      <v-col cols="12" sm="6" class="d-none d-sm-flex justify-center justify-sm-end justify-lg-end">
         <img src="../assets/images/hero.png" style="width: 70%" />
       </v-col>
     </v-row>

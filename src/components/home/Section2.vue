@@ -1,33 +1,7 @@
 <template>
   <v-container class="my-16">
     <v-row justify="space-between" align="center">
-      <v-col cols="12" sm="4" class="d-flex justify-center justify-lg-start">
-        <v-card width="400" flat>
-          <v-card-text>
-            <img src="../../assets/images/chat.png" style="width: 100%" />
-          </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="4" class="d-flex justify-center">
-        <v-progress-circular
-          :rotate="360"
-          :size="200"
-          :width="15"
-          :model-value="20"
-          color="#ff4040"
-        >
-          <div class="d-flex flex-column justify-center align-center">
-            <span class="text-h6 text-uppercase">Over</span>
-            <span class="title text-h3 font-weight-bold">{{
-              (8000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
-            }}+</span>
-            <span class="text-body-2 text-uppercase font-weight-medium"
-              >chats per day</span
-            >
-          </div>
-        </v-progress-circular>
-      </v-col>
-      <v-col cols="12" sm="4">
+      <v-col cols="12" sm="6" md="4" order="1" order-sm="0">
         <v-card flat>
           <v-card-title class="title text-uppercase text-body-1"
             >Fun cconversation</v-card-title
@@ -43,6 +17,36 @@
                 >Download Oymo</v-btn
               >
             </v-card-actions>
+          </v-card-text>
+        </v-card>
+      </v-col>
+
+      <v-col cols="12" sm="4" class="d-none d-md-flex justify-center">
+        <v-progress-circular
+          :rotate="360"
+          :size="200"
+          :width="15"
+          :model-value="50"
+          color="#ff4040"
+        >
+          <div class="d-flex flex-column justify-center align-center">
+            <span class="text-h6 text-uppercase">Over</span>
+            <span class="title text-h3 font-weight-bold"
+              >{{
+                (8000).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+              }}+</span
+            >
+            <span class="text-body-2 text-uppercase font-weight-medium"
+              >chats per day</span
+            >
+          </div>
+        </v-progress-circular>
+      </v-col>
+
+      <v-col cols="12" sm="6" md="4" class="d-flex justify-center justify-lg-start">
+        <v-card width="400" flat>
+          <v-card-text>
+            <img src="../../assets/images/chat.png" style="width: 100%" />
           </v-card-text>
         </v-card>
       </v-col>
