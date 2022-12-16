@@ -6,26 +6,24 @@
         <router-view />
       </transition>
     </v-main>
+    <FooterVue />
   </v-app>
 </template>
 
 <script>
 import AppbarVue from "./components/Appbar.vue";
+import FooterVue from "./components/Footer.vue";
 export default {
   name: "App",
   components: {
     AppbarVue,
+    FooterVue,
   },
 };
 </script>
 
 
 <style>
-@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
-* {
-  font-family: "Fira Code", monospace !important;
-}
-
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.8s;
